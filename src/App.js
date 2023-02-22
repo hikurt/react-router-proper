@@ -22,13 +22,13 @@ import RootLayout from './pages/Root';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/root',
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: '/', element: <HomePage /> },
-      { path: '/products', element: <ProductsPage /> },
-      { path: '/products/:productId', element: <ProductDetailPage /> }
+      { index: true, element: <HomePage /> },
+      { path: 'products', element: <ProductsPage /> },
+      { path: 'products/:productId', element: <ProductDetailPage /> }
     ],
   }
 ]);
